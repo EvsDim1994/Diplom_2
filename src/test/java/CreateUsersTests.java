@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.*;
 
-public class CreateOrderTests extends BaseTest {
+public class CreateUsersTests extends BaseTest {
 
     @Test
     @DisplayName("Успешное создание пользователя")
