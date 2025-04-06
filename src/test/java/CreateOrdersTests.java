@@ -1,7 +1,7 @@
 import Response.Ingredients;
 import io.qameta.allure.junit4.DisplayName;
-import model.Order;
-import model.User;
+import Model.Order;
+import Model.User;
 import org.junit.Before;
 import org.junit.Test;
 

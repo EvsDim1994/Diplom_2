@@ -1,10 +1,7 @@
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import model.Order;
-import model.User;
-
-import java.util.List;
-import java.util.Map;
+import Model.Order;
+import Model.User;
 
 public class Requests extends Client {
     @Step("Send POST request to /auth/register")

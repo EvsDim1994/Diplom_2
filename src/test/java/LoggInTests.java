@@ -1,5 +1,5 @@
 import io.qameta.allure.junit4.DisplayName;
-import model.User;
+import Model.User;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.equalTo;
