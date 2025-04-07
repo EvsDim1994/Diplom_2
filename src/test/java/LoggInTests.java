@@ -21,7 +21,7 @@ public class LoggInTests extends BaseTest {
 
         var credentials = new User(user.getEmail(), user.getPassword());
 
-        userToken = requests.loginUser(userToken, credentials)
+        userToken = requests.loginUser(credentials)
                 .then()
                 .assertThat()
                 .statusCode(200)
@@ -45,7 +45,7 @@ public class LoggInTests extends BaseTest {
 
         var credentials = new User(user.getEmail(), user.getPassword());
 
-        requests.loginUser(userToken, credentials)
+        requests.loginUser(credentials)
                 .then()
                 .assertThat()
                 .statusCode(401)
@@ -68,7 +68,7 @@ public class LoggInTests extends BaseTest {
 
         var credentials = new User(user.getEmail(), user.getPassword());
 
-        requests.loginUser(userToken, credentials)
+        requests.loginUser(credentials)
                 .then()
                 .assertThat()
                 .statusCode(401)

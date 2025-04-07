@@ -11,7 +11,6 @@ public class Requests extends Client {
                 .when()
                 .post(Endpoints.CREATE_USER);
     }
-
     @Step("Send DELETE request to /api/auth/user")
     public Response deleteUser(String token){
         return spec()
@@ -20,10 +19,10 @@ public class Requests extends Client {
                 .delete(Endpoints.UPDATE_USER);
     }
 
+
     @Step("Send POST request to /api/auth/login")
-        public Response loginUser(String token, User user){
+        public Response loginUser(User user){
             return spec()
-                    .header("Authorization", token)
                     .body(user)
                     .when()
                     .post(Endpoints.LOGIN_USER);
