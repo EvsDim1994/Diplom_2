@@ -6,7 +6,7 @@ from src.requests.requests import Request
 
 
 
-# метод регистрации нового курьера возвращает token после успешной регистрации
+# метод регистрации нового пользователя возвращает token после успешной регистрации
 def register_new_user_and_return_token(user_map):
 
     with allure.step("собираем тело запроса"):

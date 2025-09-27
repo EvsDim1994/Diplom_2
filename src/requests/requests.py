@@ -13,11 +13,14 @@ class Request(HttpClient):
         else: 
             return self.request('POST', path, json=json, **kwargs)
     
-    def get(self, path, auth_token, **kwargs):
-        headers = {
+    def get(self, path, auth_token=None, **kwargs):
+        if auth_token is not NULL:
+            headers = {
                 "Authorization": f"{auth_token}"
             }
-        return self.request('GET', path, **kwargs, headers = headers) 
+            return self.request('GET', path, **kwargs, headers = headers)
+        else: 
+            return self.request('GET', path, **kwargs)
 
     def patch(self, path, json=None, auth_token=None, **kwargs):
         if auth_token is not NULL:
